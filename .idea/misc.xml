@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/drawable/ic_more.xml" value="0.1795" />
         <entry key="app/src/main/res/drawable/ic_next.xml" value="0.128" />
         <entry key="app/src/main/res/drawable/ic_refresh.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_add_folder.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_text_file.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_audio_file.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_image_file.xml" value="0.19610507246376813" />

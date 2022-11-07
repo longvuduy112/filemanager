@@ -13,12 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".launcher.AddFolderActivity"
+            android:exported="false" />
+        <activity
             android:name=".launcher.AddTextFileActivity"
             android:exported="false" />
         <activity android:name=".launcher.AudioFileActivity" />
         <activity
             android:name=".launcher.TextFileActivity"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".launcher.ImageFileActivity" />
         <activity android:name=".launcher.VideoFileActivity" />
         <activity android:name=".MainActivity">

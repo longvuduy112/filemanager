@@ -79,15 +79,50 @@
                     android:enabled="true"
                     android:text="@string/action_refresh" />
 
-                <ImageView
-                    android:src="@drawable/ic_add"
-                    android:id="@+id/bAdd"
-                    android:padding="16dp"
-                    android:layout_gravity="center"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:enabled="true"
-                    android:text="@string/action_refresh" />
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+                    <ImageView
+                        android:src="@drawable/ic_add"
+                        android:id="@+id/bAddTxtFile"
+
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:text="@string/action_refresh" />
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add txt file"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+                    <ImageView
+                        android:src="@drawable/ic_add"
+                        android:id="@+id/bAddFolder"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:text="@string/action_refresh" />
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add folder"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+
             </LinearLayout>
 
             <ListView

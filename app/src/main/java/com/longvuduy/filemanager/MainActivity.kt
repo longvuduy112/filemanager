@@ -19,6 +19,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.longvuduy.filemanager.launcher.AddFolderActivity
 import com.longvuduy.filemanager.launcher.AddTextFileActivity
 import com.longvuduy.filemanager.manager.DefaultFileManagerListener
 import com.longvuduy.filemanager.manager.FileManager
@@ -49,7 +50,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var bCut: Button
     private lateinit var bDelete: Button
     private lateinit var bPaste: Button
-    private lateinit var bAdd: ImageView
+    private lateinit var bAddTxtFile: ImageView
+    private lateinit var bAddFolder: ImageView
 
     private lateinit var adapter: FileEntryAdapter
     private lateinit var fileActionReceiver: FileActionReceiver
@@ -158,7 +160,9 @@ class MainActivity : AppCompatActivity() {
         bDelete = findViewById(R.id.bDelete)
         bPaste = findViewById(R.id.bPaste)
 
-        bAdd = findViewById(R.id.bAdd)
+        bAddTxtFile = findViewById(R.id.bAddTxtFile)
+
+        bAddFolder = findViewById(R.id.bAddFolder)
 
         bBack.setOnClickListener {
             handleBackClick()
@@ -189,10 +193,16 @@ class MainActivity : AppCompatActivity() {
         bPaste.setOnClickListener {
             FileManager.paste()
         }
-        bAdd.setOnClickListener {
+        bAddTxtFile.setOnClickListener {
             val intent = Intent(this, AddTextFileActivity::class.java)
             intent.putExtra(References.intentAdd, "${FileManager.currentDirectory}")
             startActivity(intent)
+        }
+        bAddFolder.setOnClickListener {
+            val intent = Intent(this, AddFolderActivity::class.java)
+            intent.putExtra(References.intentAddFolder, "${FileManager.currentDirectory}")
+            startActivity(intent)
+
         }
     }
 
